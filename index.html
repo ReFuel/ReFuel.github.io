@@ -8,7 +8,7 @@
 		<link href="css/fonts.css" rel="stylesheet" media="screen">
 		<link href="css/bootstrap.css" rel="stylesheet" media="screen">
 		<link href="css/refuel.css" rel="stylesheet" media="screen">
-		<link href="css/prettify.css" rel="stylesheet">
+		<link href="css/prettify_monokai.css" rel="stylesheet">
 		<script src="js/prettify.js"></script>
 	</head>
 	<body onload="prettyPrint()">
@@ -58,17 +58,27 @@
 						<section class="span12">
 							<h2>The Basics</h2>
 							<pre class="prettyprint linenums">
-&lt;!doctype html&gt;
-	&lt;html lang="en"&gt;
-		&lt;head&gt;
-			&lt;meta charset="utf-8"&gt;
-			&lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt;
-			&lt;meta name="viewport" content="width=device-width" /&gt;
-			&lt;title&gt;RefuelJS • TodoMVC&lt;/title&gt;
-			&lt;link href="css/base.css" rel="stylesheet"&gt;
-			&lt;link rel="stylesheet" href="css/mobileApp.css"&gt;
-			&lt;script src="Refuel.js" data-rf-startup="TodoApp"&gt;&lt;/script&gt;
-		&lt;/head&gt;
+var app;
+Refuel.define('TodoApp',{require: ['GenericModule', 'DataSource']},
+    function TodoApp() {    
+        var rootElement = document.querySelector('#todoapp');
+        document.location.hash = '';
+
+        //Application Code   
+        app = Refuel.createInstance('GenericModule', { 
+            'root': rootElement, 
+            autoload: true,
+            data: {
+                'title':'ReFuel Todo App',
+                'todoList': Refuel.createInstance('DataSource', {key: 'todos-refuel', defaultDataType: 'Array'}),
+                'completedLength': 0, 
+                'activeLength': 0
+            } 
+        });
+
+});
+
+
 							</pre>
 						</section>
 					</div>
