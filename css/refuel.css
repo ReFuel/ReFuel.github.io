@@ -1,0 +1,90 @@
+html{
+	font-size: 0.875em;
+}
+body {
+	background-color: #fffff0;
+	color: #4e4f58;
+	-webkit-font-feature-settings: "kern" 1, "liga" 1;
+	-moz-font-feature-settings: "kern" 1, "liga" 1;
+	-ms-font-feature-settings: "kern" 1, "liga" 1;
+	-o-font-feature-settings: "kern" 1, "liga" 1;
+	font-feature-settings: "kern" 1, "liga" 1;
+	/*font-size: 1.5em;*/
+
+}
+a {
+	color: #4e4f58;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+header, main {
+	text-align: center;
+	padding: 2rem 0;
+}
+header img {
+	max-width: 20rem;
+}
+main {
+	padding: 0 3rem;
+	max-width: 70rem;
+	margin: 0 auto;
+}
+section {
+	padding: 0.5rem 0;
+}
+h1, h2 {
+	font-size: 1.6rem;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.6), 0 -1px 0 rgba(255, 255, 255, 0.9);
+}
+h2 {
+	font-size: 1.4rem;
+}
+section p {
+	font-size: 1.3rem;
+}
+footer {
+	background-image: -ms-linear-gradient(left, #FFFF00 0%, #FF8000 80%);
+	background-image: -moz-linear-gradient(left, #FFFF00 0%, #FF8000 80%);
+	background-image: -o-linear-gradient(left, #FFFF00 0%, #FF8000 80%);
+	background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #FFFF00), color-stop(0.8, #FF8000));
+	background-image: -webkit-linear-gradient(left, #FFFF00 0%, #FF8000 80%);
+	background-image: linear-gradient(to right, #FFFF00 0%, #FF8000 80%);
+	background-color: #ff8000;
+	font-size: 1.2rem;
+	font-weight: bold;
+	padding: 1rem;
+	color: #4e4f58;
+	border-top: 2px solid #ff8000;
+	position: relative;
+}
+footer ul {
+	padding: 0;
+	margin: 0 0 1rem 0;
+}
+footer ul li {
+	display: inline;
+	padding-right: 0.5rem;
+}
+footer p {
+	font-size: 0.8rem;
+	margin: 0;
+}
+footer p.salut {
+	text-align: right;
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+}
+@media (max-width: 500px){
+	footer ul li {
+		display: block;
+		margin-bottom: 0.2rem;
+	}
+	footer p.salut {
+		position: static;
+		text-align: left;
+		margin-top: 0.5rem;
+	}
+}
