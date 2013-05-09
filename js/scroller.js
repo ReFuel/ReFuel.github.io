@@ -1,8 +1,8 @@
 function scroller(config) {
 	var slides, windowHeight, documentHeight, prev, next, selectedElement = null;
-	if (!jQuery || !config || !config.prev || !config.next) {
+	if (!jQuery || !config || !config.prev || !config.next || ) {
 		return;
-	}
+	} 
 	slides = $(".slide");
 	prev = $(config.prev);
 	next = $(config.next);
@@ -65,7 +65,8 @@ function scroller(config) {
 		calculateElementPosition(slides[i]);
 	}
 	selectedElement = getSelectedElement();
-	
+	prevTest();
+	nextTest();
 	$(window).scroll(function(){
 		prevTest();
 		nextTest();
