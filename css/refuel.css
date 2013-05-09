@@ -4,10 +4,12 @@ body{
 	-ms-tab-size: 4;
 	-o-tab-size: 4;
 	tab-size: 4;
+	background: 
 }
 header {
-        padding: 15px 0;
-		border-top: 8px solid #FF8000;
+	padding: 15px 0;
+	border-top: 8px solid #4D4E57;
+	border-bottom: 1px solid #EBEBEB;
 }
 header h3{
 	font-weight: normal;
@@ -37,5 +39,87 @@ header iframe.twitter-follow-button{
 	padding-right: 40px;
 }
 .gray-background{
-	background: #F2F2F2;
+	background: #FBFBFB;
+}
+.white-background{
+	background: #FFF;
+}
+div.row-fluid.big-padding-top-bottom.white-background{
+	border-bottom: 1px solid #EBEBEB;
+}
+
+div.row-fluid.big-padding-top-bottom.white-background section.span6{
+	float: none;
+	display: table-cell;
+	vertical-align: middle;
+}
+div.row-fluid.big-padding-top-bottom.white-background section.span6.text{
+	padding-right: 40px;
+}
+div.pointer-wrapper{
+	position: fixed;
+	height: 25px;
+	width: 100%;
+	background: rgba(255,255,255,0.7);
+}
+div.pointer-wrapper.bottom{
+	bottom: 0
+}
+div.pointer-wrapper.top{
+	top: 0
+}
+div.bottom-pointer{
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 8px 7px 0 7px;
+	border-color: #ff8000 transparent transparent transparent;
+	margin: 0 auto;
+	cursor: pointer;
+	margin-top: 5px;
+	
+	transition: border-width 1s;
+	-webkit-transition: border-width 1s;
+}
+div.upper-pointer{
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 0  7px 8px 7px;
+	border-color: transparent transparent #ff8000 transparent;
+	margin: 0 auto;
+	cursor: pointer;
+	margin-top: 5px;
+	
+	transition: border-width 1s;
+	-webkit-transition: border-width 1s;
+}
+
+div.bottom-pointer:hover{
+	border-width: 13px 12px 0 12px;
+	
+	transition: border-width 1s;
+	-webkit-transition: border-width 1s;
+}
+div.upper-pointer:hover{
+	border-width: 0 12px 13px 12px;
+	
+	transition: border-width 1s;
+	-webkit-transition: border-width 1s;
+}
+.image{
+	text-align: center;
+}
+
+.image-right{
+	text-align: right;
+}
+.image-left{
+	text-align: left; 
+}
+
+@media (min-width: 1200px){
+	.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+		width: 940px;
+	}
 }

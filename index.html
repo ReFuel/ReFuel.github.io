@@ -10,9 +10,11 @@
 		<link href="css/refuel.css" rel="stylesheet" media="screen">
 		<link href="css/prettify_monokai.css" rel="stylesheet">
 		<script src="js/prettify.js"></script>
+		<script src="js/jquery1.9.1.min.js"></script>
 	</head>
-	<body onload="prettyPrint()">
+	<body onload="prettyPrint()" class="gray-background">
 		<main>
+			<div class="pointer-wrapper top"><div class="upper-pointer"></div></div>
 			<header class="text-center">
 				<img src="img/refuel_logo_def.png" alt="RefuelJS">
 				<h3>Make it simple, keep it clean</h3>
@@ -24,66 +26,100 @@
 					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 				</div>
 			</header>
-			<div class="gray-background">
-				<section class="container big-padding-top-bottom">
-					<div class="row-fluid">
-						<section class="span4">
-							<h2>Fast</h2>
-							<p>Having fast and memory-efficient code is our primary goal. To achieve this we use a set of tools to benchmark ReFuel and deliver fast and memory-efficient code.</p>
-						</section>
-						<section class="span4">
-							<h2>Mobile-first</h2>
-							<p>ReFuel main target is the mobile world. Thus, our framework is intended to be used on a HTML5, CSS and plain old Javascript environment.</p>
-						</section>
-						<section class="span4">
-							<h2>Flexible</h2>
-							<p>Are you using JQuery, Dojo or even Prototype? You can use ReFuel with no worries at all with your favourite library. We are keeping all of this as simple as we can, using a modular architecture so you can plug-in or out whatever your needs are.</p>
-						</section>
-					</div>
-					<div class="row-fluid">
-						<section class="span4">
-							<h2>Stable</h2>
-							<p>Developers knows that stability makes the difference choosing between frameworks. We have chosen to adopt a fully Test-Driven development in an Agile environment to assure developers we're doing this in the right and reliable way.</p>				
-							</section>
-						<section class="span4">
-							<h2>Easy to use</h2>
-							<p>The most important thing is to easily handle data, could those be on a local storage or on a remote server (just like a REST API), doesn’t matter. Get, filter, and then show: we will take care updating the WebApp for you. With love.</p>
-						</section>
-					</div>
-				</section>
+			<div id="slide1" class="row-fluid big-padding-top-bottom white-background">
+				<div class="container">
+					<section class="span6 text">
+						<h2>Fast</h2>
+						<p>Almost every framework uses heavy libraries like jQuery and jQueryMobile, this hurts performance. RefuelJS is a lightweight library-agnostic platform, written in pure JavaScript just like good old times, it provides only what you need without burdening your code with unuseful stuff. It's not only fast in performance, it's also fast in development.</p>
+					</section>
+					<section class="span6 image">
+						<img src="img/robot-fast.png" alt="fast">
+					</section>
+				</div>
 			</div>
-			<div>
-				<section class="container big-padding-top-bottom">
-					<div class="row-fluid">
-						<section class="span12">
-							<h2>The Basics</h2>
-							<pre class="prettyprint linenums">
+			<div id="slide2" class="row-fluid big-padding-top-bottom white-background">
+				<div class="container">
+					<section class="span6 image">
+						<img src="img/robot-fast.png" alt="fast">
+					</section>
+					<section class="span6 text">
+						<h2>Mobile-first</h2>
+						<p>We started this project because we needed a good base to develop our HTML5 mobile apps. RefuelJS is designed to build Mobile Web Application first and foremost. It's on smartphones that we test our performances and our features primarily. Of course everything also works on desktop environments so don't worry about that^^.</p>
+					</section>
+				</div>
+			</div>
+			<div id="slide3" class="row-fluid big-padding-top-bottom white-background">
+				<div class="container">
+					<section class="span6 text">
+						<h2>Modular</h2>
+						<p>RefuelJS dont impose the architecture of your app or the pattern to use, because this is about YOUR application. The framework only provides what you really need, provides the blocks to build your own place. RefuelJS is about identify some common necessities in webapp development and design some modules to help in those needs, but you are not forced into using everything everywhere, the framework only loads those modules you actually use. Everything else is left outside.</p>
+					</section>
+					<section class="span6 image">
+						<img src="img/robot-fast.png" alt="fast">
+					</section>
+				</div>
+			</div>
+			<div id="slide4" class="row-fluid big-padding-top-bottom white-background">
+				<div class="container">
+					<section class="span6 image">
+						<img src="img/robot-fast.png" alt="fast">
+					</section>
+					<section class="span6 text">
+						<h2>Simple</h2>
+						<p>
+							RefuelJS it's not meant to be a behemoth framework. That's not an attempt to build the JavaScript version of the Death Star, rather it's the will to build a fleet of fast and effective X-Wing Fighters.
+							RefuelJS is focused on simplicity, on providing only the functionality you need without overflowing you with prefabbricated code. 
+							The final goal is to make an application with only few lines of code and every functionality defined directly inside the markup.
+						</p>
+					</section>
+				</div>
+			</div>
+			<div id="slide5" class="row-fluid big-padding-top-bottom white-background">
+				<div class="container">
+					<section class="span6 text">
+						<h2>Community Driven</h2>
+						<p>
+							This is not OUR project, we only started this, but RefuelJS will be built by the community. The project has been hosted on github public repository from the very beginning, Appsfuel will support RefuelJS and its community but won't make everything. 
+							Anyone in need of a new feature will be able to develop a proper module to implement that functionality, we will check the compliance of the module and then an admin will add it to the main repository.
+							So the next developer needing that fantastic feature won't have to re-invent the wheel.
+						</p>
+					</section>
+					<section class="span6 image">
+						<img src="img/robot-fast.png" alt="fast">
+					</section>
+				</div>
+			</div>
+			<section class="container big-padding-top-bottom">
+				<div class="row-fluid">
+					<section class="span12">
+						<h2>The Basics</h2>
+						<pre class="prettyprint linenums">
 var app;
 Refuel.define('TodoApp',{require: ['GenericModule', 'DataSource']},
-    function TodoApp() {    
-        var rootElement = document.querySelector('#todoapp');
-        document.location.hash = '';
+function TodoApp() {    
+	var rootElement = document.querySelector('#todoapp');
+	document.location.hash = '';
 
-        //Application Code   
-        app = Refuel.createInstance('GenericModule', { 
-            'root': rootElement, 
-            autoload: true,
-            data: {
-                'title':'ReFuel Todo App',
-                'todoList': Refuel.createInstance('DataSource', {key: 'todos-refuel', defaultDataType: 'Array'}),
-                'completedLength': 0, 
-                'activeLength': 0
-            } 
-        });
+	//Application Code   
+	app = Refuel.createInstance('GenericModule', { 
+		'root': rootElement, 
+		autoload: true,
+		data: {
+			'title':'ReFuel Todo App',
+			'todoList': Refuel.createInstance('DataSource', {key: 'todos-refuel', defaultDataType: 'Array'}),
+			'completedLength': 0, 
+			'activeLength': 0
+		} 
+	});
 
 });
 
 
-							</pre>
-						</section>
-					</div>
-				</section>
-			</div>
+						</pre>
+					</section>
+				</div>
+			</section>
+			<div class="pointer-wrapper bottom"><div class="bottom-pointer"></div></div>
 		</main>
 	</body>
 </html>
