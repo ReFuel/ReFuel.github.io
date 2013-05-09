@@ -123,3 +123,12 @@ div.upper-pointer:hover{
 		width: 940px;
 	}
 }
+
+@media (max-width: 767px){
+	div.row-fluid.big-padding-top-bottom.white-background section.span6.image{
+		display: none;
+	}
+	div.pointer-wrapper{
+		display: none;
+	}
+}
