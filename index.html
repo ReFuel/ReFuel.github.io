@@ -10,7 +10,8 @@
 		<link href="css/refuel.css" rel="stylesheet" media="screen">
 		<link href="css/prettify_monokai.css" rel="stylesheet">
 		<script src="js/prettify.js"></script>
-		<script src="js/jquery1.9.1.min.js"></script>
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/scroller.js"></script>
 	</head>
 	<body onload="prettyPrint()" class="gray-background">
 		<main>
@@ -26,7 +27,7 @@
 					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 				</div>
 			</header>
-			<div id="slide1" class="row-fluid big-padding-top-bottom white-background">
+			<div class="slide row-fluid big-padding-top-bottom white-background">
 				<div class="container">
 					<section class="span6 text">
 						<h2>Fast</h2>
@@ -37,7 +38,7 @@
 					</section>
 				</div>
 			</div>
-			<div id="slide2" class="row-fluid big-padding-top-bottom white-background">
+			<div class="slide row-fluid big-padding-top-bottom white-background">
 				<div class="container">
 					<section class="span6 image">
 						<img src="img/robot-fast.png" alt="fast">
@@ -48,7 +49,7 @@
 					</section>
 				</div>
 			</div>
-			<div id="slide3" class="row-fluid big-padding-top-bottom white-background">
+			<div class="slide row-fluid big-padding-top-bottom white-background">
 				<div class="container">
 					<section class="span6 text">
 						<h2>Modular</h2>
@@ -59,7 +60,7 @@
 					</section>
 				</div>
 			</div>
-			<div id="slide4" class="row-fluid big-padding-top-bottom white-background">
+			<div class="slide row-fluid big-padding-top-bottom white-background">
 				<div class="container">
 					<section class="span6 image">
 						<img src="img/robot-fast.png" alt="fast">
@@ -74,7 +75,7 @@
 					</section>
 				</div>
 			</div>
-			<div id="slide5" class="row-fluid big-padding-top-bottom white-background">
+			<div class="slide row-fluid big-padding-top-bottom white-background">
 				<div class="container">
 					<section class="span6 text">
 						<h2>Community Driven</h2>
@@ -121,5 +122,10 @@ function TodoApp() {
 			</section>
 			<div class="pointer-wrapper bottom"><div class="bottom-pointer"></div></div>
 		</main>
+		<script>
+		$(window).load(function(){
+			scroller = new scroller({next: "div.pointer-wrapper.bottom", prev: "div.pointer-wrapper.top"});
+			});
+		</script>
 	</body>
 </html>

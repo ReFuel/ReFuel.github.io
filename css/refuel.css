@@ -78,8 +78,8 @@ div.bottom-pointer{
 	cursor: pointer;
 	margin-top: 5px;
 	
-	transition: border-width 1s;
-	-webkit-transition: border-width 1s;
+	transition: border-width 0.5s;
+	-webkit-transition: border-width 0.5s;
 }
 div.upper-pointer{
 	width: 0px;
@@ -91,8 +91,8 @@ div.upper-pointer{
 	cursor: pointer;
 	margin-top: 5px;
 	
-	transition: border-width 1s;
-	-webkit-transition: border-width 1s;
+	transition: border-width 0.5s;
+	-webkit-transition: border-width 0.5s;
 }
 
 div.bottom-pointer:hover{
