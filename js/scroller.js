@@ -120,7 +120,13 @@ function scroller(config) {
 						break;
 					}
 					case window.scrollY: {
-						$('.top-linked').animate({top: $(slides[getSelectedElement()]).offset().top},'slow');
+						var sel = getSelectedElement();
+						if (window.scrollY === (documentHeight-windowHeight)) {
+							$('.top-linked').animate({top: $(slides[sel]).offset().top + $(slides[sel]).height() + $('.top-linked').height()},'slow');
+						} else {
+							$('.top-linked').animate({top: $(slides[sel]).offset().top},'slow');
+							
+						}
 						break;
 					}
 				}
