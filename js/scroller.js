@@ -70,12 +70,6 @@ function scroller(config) {
 		
 		prev = $(config.prev);
 		next = $(config.next);
-		if(mobile && prev){
-			prev.hide();
-		}
-		if(mobile && next){
-			next.hide();
-		}
 		windowHeight = $(window).height();
 		documentHeight = $(document).height();
 		for(var i=0; i<slides.length; i++) {
@@ -86,7 +80,10 @@ function scroller(config) {
 		nextTest();
 	};
 	mobile = isMobile();
-	
+	if(mobile){
+		$(config.prev).hide();
+		$(config.next).hide();
+	}
 	setup();
 		if(!isMobile) {
 		$(window).bind("resize", function(){
