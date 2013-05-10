@@ -73,14 +73,15 @@ function scroller(config) {
 		selectedElement = getSelectedElement();
 		prevTest();
 		nextTest();
+		
+		$(window).scroll(function(){
+			prevTest();
+			nextTest();
+		});
+		
 	};
-	setup();
 	$(window).bind("resize", function(){
 		setup();
-	});
-	$(window).scroll(function(){
-		prevTest();
-		nextTest();
 	});
 	$(prev).bind("click",function(){
 		prevSlide(); 
@@ -88,6 +89,8 @@ function scroller(config) {
 	$(next).bind("click", function(){
 		nextSlide();
 	});
+	setup();
+	
 	return {
 		getSelectedElement: getSelectedElement,
 		nextSlide: nextSlide,
