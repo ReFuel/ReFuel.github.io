@@ -1,6 +1,6 @@
 
 function scroller(config) {
-	var slides, windowHeight, documentHeight, prev, next, mobile = null;
+	var slides, windowHeight, documentHeight, prev, next, mobile, scrollToTop = null;
 	function prevTest() {
 		if (window.scrollY == 0) {
 			prev.fadeOut("slow");
@@ -50,6 +50,7 @@ function scroller(config) {
 			$('html,body').animate({scrollTop: documentHeight},'slow');//window.scrollTo(0, documentHeight);
 		} else {
 			$('html,body').animate({scrollTop: slides[selectedElement+1].windowPos},'slow');//window.scrollTo(0, slides[selectedElement+1].windowPos);
+			$('img.')
 		}
 	};
 	function backToTop(){
@@ -80,6 +81,7 @@ function scroller(config) {
 		
 		prev = $(config.prev);
 		next = $(config.next);
+		config.scrollToTop? scrollToTop=config.scrollToTop : scrollToTop = false; 
 		windowHeight = $(window).height();
 		documentHeight = $(document).height();
 		for(var i=0; i<slides.length; i++) {
@@ -105,6 +107,11 @@ function scroller(config) {
 		$(next).bind("click", function(){
 			nextSlide();
 		});
+		if(scrollToTop) {
+			$(scrollToTop).bind("click",function(){
+				backToTop(); 
+			});
+		}
 	}
 	return {
 		getSelectedElement: getSelectedElement,
