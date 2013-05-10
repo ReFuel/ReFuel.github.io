@@ -63,8 +63,8 @@ function scroller(config) {
 		return false;
 	}
 	function setup(){
+		document.write(mobile);
 		if (!jQuery || !config || !config.prev || !config.next || mobile) {
-			document.write(mobile);
 			return;
 		}; 
 		slides = $(".slide");
