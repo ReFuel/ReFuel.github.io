@@ -64,6 +64,12 @@ function scroller(config) {
 	}
 	function setup(){
 // 		document.write(mobile);
+		if (mobile&&config.prev){
+			$(config.prev).hide();
+		};
+		if (mobile&&config.next){
+			$(config.next).hide();
+		}
 		if (!jQuery || !config || !config.prev || !config.next || mobile) {
 			return;
 		}; 
