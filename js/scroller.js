@@ -67,8 +67,15 @@ function scroller(config) {
 			return;
 		}; 
 		slides = $(".slide");
+		
 		prev = $(config.prev);
 		next = $(config.next);
+		if(mobile && prev){
+			prev.hide();
+		}
+		if(mobile && next){
+			next.hide();
+		}
 		windowHeight = $(window).height();
 		documentHeight = $(document).height();
 		for(var i=0; i<slides.length; i++) {
@@ -79,6 +86,7 @@ function scroller(config) {
 		nextTest();
 	};
 	mobile = isMobile();
+	
 	setup();
 		if(!isMobile) {
 		$(window).bind("resize", function(){
