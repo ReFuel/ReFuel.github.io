@@ -54,14 +54,13 @@ div.row-fluid.big-padding-top-bottom.white-background section.span6{
 	display: table-cell;
 	vertical-align: middle;
 }
-div.row-fluid.big-padding-top-bottom.white-background section.span6.text{
-	padding-right: 40px;
-}
+
 div.pointer-wrapper{
 	position: fixed;
 	height: 44px;
 	width: 100%;
 	background: rgba(255,255,255,0.7);
+	cursor: pointer;
 }
 div.pointer-wrapper.bottom{
 	bottom: 0
@@ -76,7 +75,6 @@ div.bottom-pointer{
 	border-width: 15px 14px 0 14px;
 	border-color: #ff8000 transparent transparent transparent;
 	margin: 0 auto;
-	cursor: pointer;
 	margin-top: 5px;
 	
 	transition: border-width 0.5s;
@@ -89,7 +87,6 @@ div.upper-pointer{
 	border-width: 0  14px 15px 14px;
 	border-color: transparent transparent #ff8000 transparent;
 	margin: 0 auto;
-	cursor: pointer;
 	margin-top: 5px;
 	
 	transition: border-width 0.5s;
