@@ -88,7 +88,7 @@ function scroller(config) {
 	};
 	mobile = isMobile();
 	setup();
-		if(!isMobile) {
+		if(!mobile) {
 		$(window).bind("resize", function(){
 			setup();
 		});
