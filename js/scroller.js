@@ -1,13 +1,5 @@
 function scroller(config) {
 	var slides, windowHeight, documentHeight, prev, next, selectedElement = null;
-	if (!jQuery || !config || !config.prev || !config.next || ) {
-		return;
-	} 
-	slides = $(".slide");
-	prev = $(config.prev);
-	next = $(config.next);
-	windowHeight = $(window).height();
-	documentHeight = $(document).height();
 	
 	function prevTest() {
 		if (window.scrollY == 0) {
@@ -33,10 +25,10 @@ function scroller(config) {
 	function calculateElementPosition(el){
 		var elHeight = $(el).height();
 		if(elHeight >= windowHeight){
-			el.windowPos = $(el).offset().top;
+			el.windowPos = Math.floor($(el).offset().top);
 			console.log(el.windowPos);
 		} else {
-			el.windowPos = $(el).offset().top - (Math.floor((windowHeight-elHeight)/2));
+			el.windowPos = Math.floor($(el).offset().top - (Math.floor((windowHeight-elHeight)/2)));
 			console.log(el.windowPos)
 		}
 	}
@@ -61,12 +53,26 @@ function scroller(config) {
 		}
 		
 	};
-	for(var i=0; i<slides.length; i++) {
-		calculateElementPosition(slides[i]);
-	}
-	selectedElement = getSelectedElement();
-	prevTest();
-	nextTest();
+	function setup(){
+		if (!jQuery || !config || !config.prev || !config.next) {
+			t
+		} 
+		slides = $(".slide");
+		prev = $(config.prev);
+		next = $(config.next);
+		windowHeight = $(window).height();
+		documentHeight = $(document).height();
+		for(var i=0; i<slides.length; i++) {
+			calculateElementPosition(slides[i]);
+		}
+		selectedElement = getSelectedElement();
+		prevTest();
+		nextTest();
+	};
+	setup();
+	$(window).bind("resize", function(){
+		setup();
+	});
 	$(window).scroll(function(){
 		prevTest();
 		nextTest();
