@@ -130,6 +130,6 @@ div.upper-pointer:hover{
 		display: none;
 	}
 	div.pointer-wrapper{
-		width: 90%;
+		display: none;
 	}
 }
