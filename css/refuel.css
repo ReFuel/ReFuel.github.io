@@ -121,8 +121,8 @@ img.top-linked{
 	top: 8px;
 	right: 20%;
 	
-	transition: right 1s;
-	-webkit-transition: right 1s;
+	transition: right 1s ease-out;
+	-webkit-transition: right 1s ease-out;
 }
 @media (min-width: 1200px){
 	.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
@@ -144,7 +144,7 @@ img.top-linked{
 		top: 8px;
 		right: 80%;
 		
-		transition: right 1s;
-		-webkit-transition: right 1s;
+		transition: right 1s ease-out;
+		-webkit-transition: right 1s ease-out;
 	}
 }
