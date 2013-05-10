@@ -63,7 +63,7 @@ function scroller(config) {
 		return false;
 	}
 	function setup(){
-		document.write(mobile);
+// 		document.write(mobile);
 		if (!jQuery || !config || !config.prev || !config.next || mobile) {
 			return;
 		}; 
