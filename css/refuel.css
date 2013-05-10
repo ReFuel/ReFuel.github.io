@@ -50,9 +50,9 @@ div.row-fluid.big-padding-top-bottom.white-background{
 }
 
 div.row-fluid.big-padding-top-bottom.white-background section.span6{
-	float: none;
+/*	float: none;
 	display: table-cell;
-	vertical-align: middle;
+	vertical-align: middle;*/
 }
 
 div.pointer-wrapper{
