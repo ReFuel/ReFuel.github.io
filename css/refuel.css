@@ -132,6 +132,14 @@ img.top-linked{
 }
 
 @media (max-width: 767px){
+	body{
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+	menu{
+		padding-right: 20px;
+		padding-left: 20px;
+	}
 	div.row-fluid.big-padding-top-bottom.white-background section.span6.image{
 		display: none;
 	}

@@ -14,8 +14,8 @@
 		<script src="js/scroller.js?t=125"></script>
 	</head>
 	<body onload="prettyPrint()" class="gray-background">
+		<div class="pointer-wrapper top"><div class="upper-pointer"></div></div>
 		<main>
-			<div class="pointer-wrapper top"><div class="upper-pointer"></div></div>
 			<header class="text-center">
 				<img src="img/robot_header.png" alt="robot-header" class="top-linked">
 				<img src="img/refuel_logo_def.png" alt="RefuelJS">
@@ -121,8 +121,8 @@ function TodoApp() {
 					</section>
 				</div>
 			</section>
-			<div class="pointer-wrapper bottom"><div class="bottom-pointer"></div></div>
 		</main>
+		<div class="pointer-wrapper bottom"><div class="bottom-pointer"></div></div>
 		<script>
 		$(window).load(function(){
 			scroller = new scroller({next: "div.pointer-wrapper.bottom", prev: "div.pointer-wrapper.top"});

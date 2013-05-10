@@ -800,7 +800,7 @@
 }
 
 @media (max-width: 767px) {
-  body {
+  menu {
     padding-right: 20px;
     padding-left: 20px;
   }
