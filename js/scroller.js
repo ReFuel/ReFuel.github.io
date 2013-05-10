@@ -52,6 +52,9 @@ function scroller(config) {
 			$('html,body').animate({scrollTop: slides[selectedElement+1].windowPos},'slow');//window.scrollTo(0, slides[selectedElement+1].windowPos);
 		}
 	};
+	function backToTop(){
+		$('html,body').animate({scrollTop: documentHeight},'slow');
+	}
 	function isMobile(){
 		var a = window.navigator.userAgent;
 // 		document.write(a);

@@ -116,7 +116,11 @@ div.upper-pointer:hover{
 .image-left{
 	text-align: left; 
 }
-
+img.top-linked{
+	position: absolute;
+	top: 8px;
+	right: 20%;
+}
 @media (min-width: 1200px){
 	.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
 		width: 940px;
