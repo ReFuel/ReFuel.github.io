@@ -61,6 +61,7 @@ div.pointer-wrapper{
 	width: 100%;
 	background: rgba(255,255,255,0.7);
 	cursor: pointer;
+	box-shadow: 0 0 10px rgba (0,0,0,0.2);
 }
 div.pointer-wrapper.bottom{
 	bottom: 0
@@ -75,7 +76,7 @@ div.bottom-pointer{
 	border-width: 15px 14px 0 14px;
 	border-color: #ff8000 transparent transparent transparent;
 	margin: 0 auto;
-	margin-top: 5px;
+	margin-top: 15px;
 	
 	transition: border-width 0.5s;
 	-webkit-transition: border-width 0.5s;
@@ -87,7 +88,7 @@ div.upper-pointer{
 	border-width: 0  14px 15px 14px;
 	border-color: transparent transparent #ff8000 transparent;
 	margin: 0 auto;
-	margin-top: 5px;
+	margin-top: 15px;
 	
 	transition: border-width 0.5s;
 	-webkit-transition: border-width 0.5s;
