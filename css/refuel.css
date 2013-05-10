@@ -120,10 +120,23 @@ img.top-linked{
 	position: absolute;
 	top: 8px;
 	right: 20%;
+	
+	transition: border-width 1s;
+	-webkit-transition: border-width 1s;
 }
 @media (min-width: 1200px){
 	.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
 		width: 940px;
+	}
+	
+	img.top-linked{
+		position: absolute;
+		top: 8px;
+		right: auto;
+		left: 20%;
+		
+		transition: border-width 1s;
+		-webkit-transition: border-width 1s;
 	}
 }
 
