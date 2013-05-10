@@ -121,23 +121,14 @@ img.top-linked{
 	top: 8px;
 	right: 20%;
 	
-	transition: border-width 1s;
-	-webkit-transition: border-width 1s;
+	transition: right 1s;
+	-webkit-transition: right 1s;
 }
 @media (min-width: 1200px){
 	.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
 		width: 940px;
 	}
 	
-	img.top-linked{
-		position: absolute;
-		top: 8px;
-		right: auto;
-		left: 20%;
-		
-		transition: border-width 1s;
-		-webkit-transition: border-width 1s;
-	}
 }
 
 @media (max-width: 767px){
@@ -146,5 +137,14 @@ img.top-linked{
 	}
 	div.pointer-wrapper{
 		display: none;
+	}
+	
+	img.top-linked{
+		position: absolute;
+		top: 8px;
+		right: 80%;
+		
+		transition: right 1s;
+		-webkit-transition: right 1s;
 	}
 }
