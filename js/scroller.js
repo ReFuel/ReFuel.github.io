@@ -1,6 +1,6 @@
 
 function scroller(config) {
-	var slides, windowHeight, documentHeight, prev, next, mobile, scrollToTop = null;
+	var slides, windowHeight, documentHeight, prev, next, mobile, scrollToTop, cursor, cursorStartPosition = null;
 	function prevTest() {
 		if (window.scrollY == 0) {
 			prev.fadeOut("slow");
@@ -35,22 +35,34 @@ function scroller(config) {
 	function prevSlide() {
 		var selectedElement = getSelectedElement();
 		if (window.scrollY > slides[selectedElement].windowPos) {
-			$('html,body').animate({scrollTop: slides[selectedElement].windowPos},'slow');//window.scrollTo(0, slides[selectedElement].windowPos);
+			$('html,body').animate({scrollTop: slides[selectedElement].windowPos},'slow', 'swing', function(){
+				$('.top-linked').animate({top: $(slides[selectedElement]).offset().top},'slow');
+			});//window.scrollTo(0, slides[selectedElement].windowPos);
 		} else if(selectedElement === 0) {
 			$('html,body').animate({scrollTop: 0},'slow');//window.scrollTo(0, 0);
+			$('.top-linked').animate({top: 8},'slow');
 		} else {
-			$('html,body').animate({scrollTop: slides[selectedElement-1].windowPos},'slow');//window.scrollTo(0, slides[selectedElement-1].windowPos);
+			$('html,body').animate({scrollTop: slides[selectedElement-1].windowPos},'slow', 'swing', function(){
+				$('.top-linked').animate({top: $(slides[selectedElement-1]).offset().top},'slow');
+			});//window.scrollTo(0, slides[selectedElement-1].windowPos);
+			
 		}
 	};
 	function nextSlide() {
 		var selectedElement = getSelectedElement();
 		if (window.scrollY < slides[selectedElement].windowPos) {
-			$('html,body').animate({scrollTop: slides[selectedElement].windowPos},'slow');//window.scrollTo(0, slides[selectedElement].windowPos);
+			$('html,body').animate({scrollTop: slides[selectedElement].windowPos},'slow', 'swing', function(){
+				$('.top-linked').animate({top: $(slides[selectedElement]).offset().top},'slow');
+			});
+			$('.top-linked').animate({top: $(slides[selectedElement]).offset().top},'slow');//window.scrollTo(0, slides[selectedElement].windowPos);
 		} else if (selectedElement >= slides.length-1) {
-			$('html,body').animate({scrollTop: documentHeight},'slow');//window.scrollTo(0, documentHeight);
+			$('html,body').animate({scrollTop: documentHeight}, 'slow');//window.scrollTo(0, documentHeight);
+			$('.top-linked').animate({top: $(slides[selectedElement]).offset().top + $(slides[selectedElement]).height() + $('.top-linked').height()},'slow');
 		} else {
-			$('html,body').animate({scrollTop: slides[selectedElement+1].windowPos},'slow');//window.scrollTo(0, slides[selectedElement+1].windowPos);
-			$('img.')
+			$('html,body').animate({scrollTop: slides[selectedElement+1].windowPos},'slow', 'swing', function(){
+				$('.top-linked').animate({top: $(slides[selectedElement+1]).offset().top},'slow');
+			});//window.scrollTo(0, slides[selectedElement+1].windowPos);
+
 		}
 	};
 	function backToTop(){
@@ -98,8 +110,21 @@ function scroller(config) {
 			setup();
 		});
 		$(window).scroll(function(){
+			var pos = window.scrollY;
 			prevTest();
 			nextTest();
+			window.setTimeout(function(){
+				switch(pos){
+					case 0:{
+						$('.top-linked').animate({top: 8},'slow');
+						break;
+					}
+					case window.scrollY: {
+						$('.top-linked').animate({top: $(slides[getSelectedElement()]).offset().top},'slow');
+						break;
+					}
+				}
+			}, 200);
 		});
 		$(prev).bind("click",function(){
 			prevSlide(); 

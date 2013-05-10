@@ -159,6 +159,8 @@ img.top-linked{
 		-webkit-transition: right 1s ease-out;
 	}
 }
+	
+	
 
 @media (orientation: portrait){
 	img.top-linked{
@@ -181,3 +183,13 @@ img.top-linked{
 		-webkit-transition: right 1s ease-out;
 	}
 }
+
+@media (max-width: 767px and orientation: portrait){
+	img.top-linked{
+		position: absolute;
+		top: 8px;
+		right: 80%;
+		
+		transition: right 1s ease-out;
+		-webkit-transition: right 1s ease-out;
+	}
