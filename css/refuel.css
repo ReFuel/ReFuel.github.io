@@ -193,3 +193,16 @@ img.top-linked{
 		transition: right 1s ease-out;
 		-webkit-transition: right 1s ease-out;
 	}
+}
+
+@media (max-width: 767px and orientation: landscape){
+	img.top-linked{
+		position: absolute;
+		top: 8px;
+		right: 10%;
+		
+		transition: right 1s ease-out;
+		-webkit-transition: right 1s ease-out;
+	}
+}
+	
