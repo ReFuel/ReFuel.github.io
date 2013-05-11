@@ -184,7 +184,7 @@ img.top-linked{
 	}
 }
 
-@media (max-width: 767px and orientation: portrait){
+@media (max-width: 767px) and (orientation: portrait){
 	img.top-linked{
 		position: absolute;
 		top: 8px;
@@ -195,7 +195,7 @@ img.top-linked{
 	}
 }
 
-@media (max-width: 767px and orientation: landscape){
+@media (max-width: 767px) and (orientation: landscape){
 	img.top-linked{
 		position: absolute;
 		top: 8px;
