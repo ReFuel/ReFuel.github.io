@@ -24,7 +24,7 @@ header a.btn-large{
 }
 a.btn.btn-info{
 	color: #727272;
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
+	text-shadow: 0 -1px 0 rgb(0, 0, 0);
 	background-color: #EEEEEE;
 	background-image: -moz-linear-gradient(top, #FFFFFF, #EEEEEE);
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FFFFFF), to(#EEEEEE));
