@@ -126,9 +126,20 @@ function TodoApp() {
 			</section>
 		</main>
 		<div class="pointer-wrapper bottom"><div class="bottom-pointer"></div></div>
+		<div class="leftmenu">
+			<ul>
+				<li class="home selected"></li>
+				<li class="mobile"></li>
+				<li class="simple"></li>
+				<li class="fast"></li>
+				<li class="modular"></li>
+				<li class="community"></li>
+				<li class="basics"></li>
+			</ul>
+		</div>
 		<script>
 		$(window).load(function(){
-			scroller = new scroller({next: "div.pointer-wrapper.bottom", prev: "div.pointer-wrapper.top"});
+			scroller = new scroller({next: "div.pointer-wrapper.bottom", prev: "div.pointer-wrapper.top", menu: ".leftmenu"});
 			});
 		</script>
 	</body>

@@ -127,6 +127,69 @@ img.top-linked{
 	transition: right 1s ease-out;
 	-webkit-transition: right 1s ease-out;
 }
+
+.leftmenu{
+	width: 40px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	position: fixed;
+	top: 30%;
+	left: 0px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	text-align: center;
+	font-size: 35px;
+	color: rgba(0,0,0,0.2);
+	transition: color 1s;
+	-webkit-transition: color 1s;
+}
+.leftmenu ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.leftmenu ul li{
+	line-height: 40px;
+}
+.leftmenu ul li.selected{
+	color: #FF8000;
+	transition: color 1s;
+	-webkit-transition: color 1s;
+}
+.leftmenu ul li.home:after{
+	font-family: "icons";
+	content: "S";
+}
+.leftmenu ul li.mobile:after{
+	content: "\ \260E";
+	font-size: 25px;
+}
+.leftmenu ul li.community:after{
+	font-family: "icons";
+	content: "K";
+}
+.leftmenu ul li.modular:after{
+	font-family: "icons";
+	content: "Ü";
+}
+.leftmenu ul li.fast:after{
+	font-family: "icons";
+	content: "⚡";
+}
+.leftmenu ul li.simple:after{
+	font-family: "icons";
+	content: "b";
+}
+.leftmenu ul li.basics:after{
+	font-family: "icons";
+	content: "Ì";
+}
+
+
+.back-to-top:after{
+	content: "9";
+	font-family: "icons";
+	-webkit-transform: rotate(90deg);
+}
 @media (min-width: 1200px){
 	.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
 		width: 940px;
@@ -136,8 +199,8 @@ img.top-linked{
 
 @media (max-width: 767px){
 	body{
-		padding-right: none;
-		padding-left: none;
+		padding-right: 0;
+		padding-left: 0;
 	}
 	main{
 		padding-right: 20px;
