@@ -208,6 +208,9 @@ img.top-linked{
 	content: "Ì";
 }
 
+.small {
+	font-size: 13px;
+}
 
 .back-to-top:after{
 	content: "9";

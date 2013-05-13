@@ -1,0 +1,44 @@
+/* Pretty printing styles. Used with prettify.js. */
+/* Refuel Theme by Stefano Sergio */
+/* created from Vim sunburst theme by David Leibovic */
+
+pre .str, code .str { color: #f3e076; } /*E6DB74*/ /*f3e076*/
+pre .kwd, code .kwd { color: #18d6e0; } /*66ccff*/
+pre .com, code .com { color: #AEAEAE; font-style: italic; } 
+pre .typ, code .typ { color: #ff7f00; } /*86D62A*/ /*ff7f00*/
+pre .lit, code .lit { color: #8973a0; } /*a28bb9*/ /*856DDD*/  /**/
+pre .pun, code .pun { color: #fff; } 
+pre .pln, code .pln { color: #fff; } 
+pre .tag, code .tag { color: #ff7f00; } 
+pre .atn, code .atn { color: #18d6e0; } 
+pre .atv, code .atv { color: #f3e076; } 
+pre .dec, code .dec { color: #3387CC; } 
+
+pre.prettyprint, code.prettyprint {
+	background-color: #272822;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-o-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-khtml-border-radius: 8px;
+	border-radius: 8px;
+}
+
+pre.prettyprint {
+	width: 95%;
+	margin: 1em auto;
+	padding: 1em;
+	white-space: pre-wrap;
+}
+
+xmp.prettyprint {
+	line-height: 17px;
+	font-size: 12px;
+}
+
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0; color: #AEAEAE; } /* IE indents via margin-left */
+li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 
+/* Alternate shading for lines */
+li.L1,li.L3,li.L5,li.L7,li.L9 { line-height: 17px; }
