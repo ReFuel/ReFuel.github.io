@@ -22,11 +22,32 @@ header a.btn{
 header a.btn-large{
 	padding: 11px 19px 11px 13px;
 }
-header a.btn:before{
+a.btn.btn-info{
+	color: #727272;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #EEEEEE;
+	background-image: -moz-linear-gradient(top, #FFFFFF, #EEEEEE);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FFFFFF), to(#EEEEEE));
+	background-image: -webkit-linear-gradient(top, #FFFFFF, #EEEEEE);
+	background-image: -o-linear-gradient(top, #FFFFFF, #EEEEEE);
+	background-image: linear-gradient(to bottom, #FFFFFF, #EEEEEE);
+	background-repeat: repeat-x;
+	border-color: #CDCDCD;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#EEEEEE', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+header a.btn.github-icon:before{
 	content: "U";
 	font-family: "icons";
 	font-size: 40px;
 	vertical-align: middle;
+}
+header a.btn.twitter-icon:before{
+	content: "^";
+	font-family: "icons";
+	font-size: 40px;
+	vertical-align: middle;
+ 	color: #00ACEE;  
 }
 header iframe.twitter-follow-button{
 	margin-right: 20px;
