@@ -150,6 +150,9 @@ img.top-linked{
 .leftmenu ul li{
 	line-height: 40px;
 }
+.leftmenu ul li:hover{
+	cursor: pointer;
+}
 .leftmenu ul li.selected{
 	color: #FF8000;
 	transition: color 1s;
