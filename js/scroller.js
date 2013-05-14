@@ -26,10 +26,10 @@ function scroller(config) {
 		var elHeight = $(el).height();
 		if(elHeight >= windowHeight){
 			el.windowPos = Math.floor($(el).offset().top);
-			console.log(el.windowPos);
+			//console.log(el.windowPos);
 		} else {
 			el.windowPos = Math.floor($(el).offset().top - (Math.floor((windowHeight-elHeight)/2)));
-			console.log(el.windowPos)
+			//console.log(el.windowPos)
 		}
 	}
 	function prevSlide() {
