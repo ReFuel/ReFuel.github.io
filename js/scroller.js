@@ -183,6 +183,9 @@ function scroller(config) {
 								$('.top-linked').animate({top: $(slides[sel]).offset().top}, 'slow');
 								setMenu("end");
 							}else{
+								if(window.scrollY >= documentHeight - windowHeight){
+									return;
+								}
 								$('.top-linked').animate({top: $(slides[sel]).offset().top + $(slides[sel]).height() + $('.top-linked').height()},'slow');
 								setMenu("end");
 							}
