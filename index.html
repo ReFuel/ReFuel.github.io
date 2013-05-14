@@ -4,6 +4,8 @@
 		<title>Refuel JS</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1-0">
 		<meta charset="utf-8">
+		<link rel="icon shortcut" type="image/x-icon" href="favicon.ico">
+
 		<!-- Bootstrap -->
 		<link href="css/fonts.css" rel="stylesheet" media="screen">
 		<link href="css/bootstrap.css" rel="stylesheet" media="screen">
@@ -147,7 +149,8 @@ function TodoApp() {
 				<div class="row-fluid">
 					<section class="span12">
 						<section id="example-app" class="hero-unit">
-							<h2>{{app_title}}</h2>
+							<h4>{{app_title}}</h4>
+							<h5 class="smaller">data are persistent and will be saved in local storage</h5>
 							<input type="text" placeholder="Write something and press Enter" data-rf-action-keydown="items:add" autofocus>
 							<ul data-rf-list="items" >
 								<li data-rf-template="itemsTemplate"> 

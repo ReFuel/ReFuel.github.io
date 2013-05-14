@@ -210,6 +210,12 @@ img.top-linked{
 .small {
 	font-size: 13px;
 }
+h5.smaller {
+	line-height: 17px;
+	font-size: 12px;
+	font-weight: normal;
+	margin-top: -10px;
+}
 
 .back-to-top:after{
 	content: "9";
