@@ -207,6 +207,7 @@ function scroller(config) {
 			nextSlide();
 		});
 		window.onkeypress = function(e){
+			e.preventDefault();
 			switch(e.which){
 				case "38":{
 					prevSlide();
