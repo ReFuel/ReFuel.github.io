@@ -12,6 +12,7 @@
 		<script src="js/prettify.js"></script>
 		<script src="js/jquery-1.9.1.min.js"></script>
 		<script src="js/scroller.js?t=16"></script>
+		<script src="js/refuel.min.js" data-rf-startup="DemoApp"></script>
 	</head>
 	<body onload="prettyPrint()" class="gray-background">
 		<div class="pointer-wrapper top"><div class="upper-pointer"></div></div>
@@ -97,23 +98,26 @@
 				</div>
 			</div>
 			<section class="slide container big-padding-top-bottom">
+				
+
 				<div class="row-fluid">
 					<section class="span12">
 						<h2>The Basics</h2>
 
 						<pre class="linenums prettyprint html">
 						<script type="text/plain" style="display:block">
-<section id="example-app" data-rf-visibility="items.length">
-<h1>{{app_title}}</h1>
-<input placeholder="What needs to be done?" data-rf-action-keydown="items:add" autofocus>
-<ul data-rf-list="items" >
-	<li data-rf-template="itemsTemplate" data-rf-action-swipe="toggleDeleteButton" > 
-		<div class="view">
-			<label data-rf-action-dblclick="edit">{{title}}</label>
-			<button class="destroy" data-rf-action="delete"></button>
-		</div>
-	</li>
-</ul>
+<section id="example-app">
+	<h2>{{app_title}}</h2>
+	<input placeholder="Write something and press Enter" autofocus
+		data-rf-action-keydown="items:add" >
+	<ul data-rf-list="items" >
+		<li> 
+			<div class="view">
+				<label>{{title}}</label>
+				<button class="destroy" data-rf-action="delete"></button>
+			</div>
+		</li>
+	</ul>
 </section>
 						</script>
 						</pre>
@@ -132,18 +136,33 @@ function TodoApp() {
 		autoload: true,
 		data: {
 			'app_title' : 'Refuel Example',
-			'items': Refuel.newModule('DataSource', {key: 'todos-refuel', defaultDataType: 'Array'})
+			'items': Refuel.newModule('DataSource', {key: 'refuel-items'})
 		} 
 	});
-
 });
 						</pre>
 					</section>
 				</div>
+
+				<div class="row-fluid">
+					<section class="span12">
+						<section id="example-app" class="hero-unit">
+							<h2>{{app_title}}</h2>
+							<input type="text" placeholder="Write something and press Enter" data-rf-action-keydown="items:add" autofocus>
+							<ul data-rf-list="items" >
+								<li data-rf-template="itemsTemplate"> 
+									<div class="view">
+										<label>{{title}}</label>
+										<a class="destroy" data-rf-action="delete">X</a>
+									</div>
+								</li>
+							</ul>
+						</section>
+					</section>
+				</div>
 			</section>
-
-
 		</main>
+
 		<div class="pointer-wrapper bottom"><div class="bottom-pointer"></div></div>
 		<div class="leftmenu">
 			<ul>

@@ -216,6 +216,29 @@ img.top-linked{
 	font-family: "icons";
 	-webkit-transform: rotate(90deg);
 }
+
+#example-app {
+	margin: 13px;
+	margin-left: 9.5px;
+	margin-right: 9px;
+	padding: 13px;
+	min-height: 300px;
+	border: 1px solid;
+}
+#example-app input {
+	min-width: 250px;
+}
+
+#example-app .destroy {
+	font-size: 12px;
+	cursor: pointer;
+}
+#example-app label {
+	width: auto;
+	display: inline-block;
+}
+
+
 @media (min-width: 1200px){
 	.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
 		width: 940px;
