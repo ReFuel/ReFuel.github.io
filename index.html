@@ -8,7 +8,7 @@
 		<link href="css/fonts.css" rel="stylesheet" media="screen">
 		<link href="css/bootstrap.css" rel="stylesheet" media="screen">
 		<link href="css/refuel.css" rel="stylesheet" media="screen">
-		<link href="css/prettify_monokai.css" rel="stylesheet">
+		<link href="css/prettify_refuel.css" rel="stylesheet">
 		<script src="js/prettify.js"></script>
 		<script src="js/jquery-1.9.1.min.js"></script>
 		<script src="js/scroller.js?t=16"></script>
@@ -22,6 +22,7 @@
 				<h3>Make it simple, keep it clean</h3>
 				<a href="https://github.com/ReFuel/ReFuelJS" target="_blank" class="btn btn-large btn-primary github-icon"> View on GitHub</a>
 				<a href="https://twitter.com/appsfuel" target="_blank" class="btn btn-large btn-info twitter-icon"> Follow @appsfuel</a>
+				<div class="small">A project by <a href="http://appsfuel.com">Appsfuel</a> Developer Team</div>
 				<!--<div>
 					<a href="https://twitter.com/appsfuel" class="twitter-follow-button" data-show-count="true" data-dnt="true">Follow @appsfuel</a>
 					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
@@ -99,32 +100,49 @@
 				<div class="row-fluid">
 					<section class="span12">
 						<h2>The Basics</h2>
+
+						<pre class="linenums prettyprint html">
+						<script type="text/plain" style="display:block">
+<section id="example-app" data-rf-visibility="items.length">
+<h1>{{app_title}}</h1>
+<input placeholder="What needs to be done?" data-rf-action-keydown="items:add" autofocus>
+<ul data-rf-list="items" >
+	<li data-rf-template="itemsTemplate" data-rf-action-swipe="toggleDeleteButton" > 
+		<div class="view">
+			<label data-rf-action-dblclick="edit">{{title}}</label>
+			<button class="destroy" data-rf-action="delete"></button>
+		</div>
+	</li>
+</ul>
+</section>
+						</script>
+						</pre>
+					</section>
+				</div>
+
+				<div class="row-fluid">
+					<section class="span12">
+					
 						<pre class="prettyprint linenums">
 var app;
-Refuel.define('TodoApp',{require: ['GenericModule', 'DataSource']},
+Refuel.define('ExampleApp',{require: ['GenericModule', 'DataSource']},
 function TodoApp() {    
-	var rootElement = document.querySelector('#todoapp');
-	document.location.hash = '';
-
-	//Application Code   
-	app = Refuel.createInstance('GenericModule', { 
-		'root': rootElement, 
+	app = Refuel.newModule('GenericModule', { 
+		root: document.querySelector('#example-app'), 
 		autoload: true,
 		data: {
-			'title':'ReFuel Todo App',
-			'todoList': Refuel.createInstance('DataSource', {key: 'todos-refuel', defaultDataType: 'Array'}),
-			'completedLength': 0, 
-			'activeLength': 0
+			'app_title' : 'Refuel Example',
+			'items': Refuel.newModule('DataSource', {key: 'todos-refuel', defaultDataType: 'Array'})
 		} 
 	});
 
 });
-
-
 						</pre>
 					</section>
 				</div>
 			</section>
+
+
 		</main>
 		<div class="pointer-wrapper bottom"><div class="bottom-pointer"></div></div>
 		<div class="leftmenu">
@@ -144,4 +162,4 @@ function TodoApp() {
 			});
 		</script>
 	</body>
-</html>
+</html>_
