@@ -206,13 +206,13 @@ function scroller(config) {
 		$(next).bind("click", function(){
 			nextSlide();
 		});
-		$(document).keypress(function(e){
+		$(document).keydown(function(e){
 			e.preventDefault();
 			switch(e.which){
-				case "38":{
+				case 38:{
 					prevSlide();
 				}
-				case "40":{
+				case 40:{
 					nextSlide();
 				}
 			}
