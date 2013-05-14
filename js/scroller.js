@@ -178,11 +178,16 @@ function scroller(config) {
 					}
 					case window.scrollY: {
 						var sel = getSelectedElement();
-						if (window.scrollY >= (documentHeight-windowHeight)) {
+						if (window.scrollY === (documentHeight-windowHeight)) {
 							if(window.scrollY+$(slides[sel]).height() >= documentHeight){
 								$('.top-linked').animate({top: $(slides[sel]).offset().top}, 'slow');
 								setMenu("end");
 							}else{
+								if(window.scrollY >= documentHeight - windowHeight){
+									$('.top-linked').animate({top: $(slides[sel]).offset().top},'slow');
+									setMenu("end");
+									return;
+								}
 								$('.top-linked').animate({top: $(slides[sel]).offset().top + $(slides[sel]).height() + $('.top-linked').height()},'slow');
 								setMenu("end");
 							}
