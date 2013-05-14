@@ -196,7 +196,6 @@ img.top-linked{
 	content: "Ü";
 }
 .leftmenu ul li.fast:after{
-	font-family: "icons";
 	content: "⚡";
 }
 .leftmenu ul li.simple:after{
