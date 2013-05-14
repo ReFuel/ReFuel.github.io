@@ -215,7 +215,7 @@ function scroller(config) {
 					nextSlide();
 				}
 			}
-		});
+		};
 		if(menu) {
 			$(menu + " ul li").each(function(){
 				$(this).bind("click",function(e){
