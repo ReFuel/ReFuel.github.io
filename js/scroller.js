@@ -206,7 +206,7 @@ function scroller(config) {
 		$(next).bind("click", function(){
 			nextSlide();
 		});
-		window.onkeypress = function(e){
+		$(document).keypress(function(e){
 			e.preventDefault();
 			switch(e.which){
 				case "38":{
@@ -216,7 +216,7 @@ function scroller(config) {
 					nextSlide();
 				}
 			}
-		};
+		});
 		if(menu) {
 			$(menu + " ul li").each(function(){
 				$(this).bind("click",function(e){
