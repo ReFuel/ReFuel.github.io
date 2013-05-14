@@ -206,7 +206,7 @@ function scroller(config) {
 		$(next).bind("click", function(){
 			nextSlide();
 		});
-		$(window).bind("keypress", function(e){
+		$(window).keypress(function(e){
 			switch(e.which){
 				case "38":{
 					prevSlide();
