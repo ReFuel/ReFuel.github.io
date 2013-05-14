@@ -211,9 +211,11 @@ function scroller(config) {
 			switch(e.which){
 				case 38:{
 					prevSlide();
+					break;
 				}
 				case 40:{
 					nextSlide();
+					break;
 				}
 			}
 		});
