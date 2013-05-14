@@ -184,6 +184,8 @@ function scroller(config) {
 								setMenu("end");
 							}else{
 								if(window.scrollY >= documentHeight - windowHeight){
+									$('.top-linked').animate({top: $(slides[sel]).offset().top},'slow');
+									setMenu("end");
 									return;
 								}
 								$('.top-linked').animate({top: $(slides[sel]).offset().top + $(slides[sel]).height() + $('.top-linked').height()},'slow');
@@ -203,6 +205,19 @@ function scroller(config) {
 		});
 		$(next).bind("click", function(){
 			nextSlide();
+		});
+		$(document).keydown(function(e){
+			e.preventDefault();
+			switch(e.which){
+				case 38:{
+					prevSlide();
+					break;
+				}
+				case 40:{
+					nextSlide();
+					break;
+				}
+			}
 		});
 		if(menu) {
 			$(menu + " ul li").each(function(){
