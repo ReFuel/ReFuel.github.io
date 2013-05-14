@@ -55,8 +55,13 @@ function scroller(config) {
 			});
 			$('.top-linked').animate({top: $(slides[selectedElement]).offset().top},'slow');//window.scrollTo(0, slides[selectedElement].windowPos);
 		} else if (selectedElement >= slides.length-1) {
-			$('html,body').animate({scrollTop: documentHeight}, 'slow');//window.scrollTo(0, documentHeight);
-			$('.top-linked').animate({top: $(slides[selectedElement]).offset().top + $(slides[selectedElement]).height() + $('.top-linked').height()},'slow');
+			$('html,body').animate({scrollTop: documentHeight}, 'slow', 'swing', function(){
+				if(window.scrollY >= documentHeight - windowHeight){
+					return;
+				}
+				$('.top-linked').animate({top: $(slides[selectedElement]).offset().top + $(slides[selectedElement]).height() + $('.top-linked').height()},'slow');
+			});//window.scrollTo(0, documentHeight);
+			
 		} else {
 			$('html,body').animate({scrollTop: slides[selectedElement+1].windowPos},'slow', 'swing', function(){
 				$('.top-linked').animate({top: $(slides[selectedElement+1]).offset().top},'slow');
@@ -174,8 +179,13 @@ function scroller(config) {
 					case window.scrollY: {
 						var sel = getSelectedElement();
 						if (window.scrollY === (documentHeight-windowHeight)) {
-							$('.top-linked').animate({top: $(slides[sel]).offset().top + $(slides[sel]).height() + $('.top-linked').height()},'slow');
-							setMenu("end");
+							if(window.scrollY+$(slides[sel]).height() >= documentHeight){
+								$('.top-linked').animate({top: $(slides[sel]).offset().top}, 'slow');
+								setMenu("end");
+							}else{
+								$('.top-linked').animate({top: $(slides[sel]).offset().top + $(slides[sel]).height() + $('.top-linked').height()},'slow');
+								setMenu("end");
+							}
 						} else {
 							$('.top-linked').animate({top: $(slides[sel]).offset().top},'slow');
 							setMenu(sel+1);
