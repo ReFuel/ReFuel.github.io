@@ -178,7 +178,7 @@ function scroller(config) {
 					}
 					case window.scrollY: {
 						var sel = getSelectedElement();
-						if (window.scrollY >== (documentHeight-windowHeight)) {
+						if (window.scrollY >= (documentHeight-windowHeight)) {
 							if(window.scrollY+$(slides[sel]).height() >= documentHeight){
 								$('.top-linked').animate({top: $(slides[sel]).offset().top}, 'slow');
 								setMenu("end");
