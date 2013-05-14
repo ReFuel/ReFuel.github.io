@@ -232,7 +232,8 @@ h5.smaller {
 	border: 1px solid;
 }
 #example-app input {
-	min-width: 250px;
+	width: 100%;
+	max-width: 250px;
 }
 
 #example-app .destroy {
