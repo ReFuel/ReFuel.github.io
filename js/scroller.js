@@ -184,6 +184,7 @@ function scroller(config) {
 								setMenu("end");
 							}else{
 								if(window.scrollY >= documentHeight - windowHeight){
+									setMenu("end");
 									return;
 								}
 								$('.top-linked').animate({top: $(slides[sel]).offset().top + $(slides[sel]).height() + $('.top-linked').height()},'slow');
